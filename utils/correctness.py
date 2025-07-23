@@ -26,6 +26,7 @@ def execute_template(synchronize, device, context):
             set_seed(seed_num)  # set seed for reproducible weights
             original_model = Model(*init_inputs).to(device)
             synchronize(device=device)
+            set_seed(seed_num)
             custom_model = ModelNew(*init_inputs).to(device)
             synchronize(device=device)
         with torch.no_grad():

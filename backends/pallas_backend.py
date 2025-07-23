@@ -46,6 +46,7 @@ class PallasBackend(Backend):
                 set_seed(seed_num)  # set seed for reproducible weights
                 original_model = Model(*init_inputs).to(self.device)
                 torch_xla.sync(wait=True)
+                set_seed(seed_num)
                 custom_model = ModelNew(*init_inputs).to(self.device)
                 torch_xla.sync(wait=True)
             with torch.no_grad():
