@@ -16,7 +16,7 @@ pip install torch-npu==2.1.0.post12
 You can rent GPU or NPU resources from online platforms such as [autodl](https://www.autodl.com/home). For TPU resources, you can use services like [Google Colab](https://colab.research.google.com/)
 
 ### Config
-Set configurations in config.py, including temperature and top_p for LLM. For Ascendc evaluation, set ascendc_device = ai_core-<soc_version>.
+Set configurations in config.py, including temperature and top_p for LLM. For CUDA-based evaluation, set arch_list. For Ascendc evaluation, set ascendc_device = ai_core-<soc_version>.
 
 ### Set API keys for LLM
 ```

@@ -3,6 +3,7 @@ from backends.backend_registry import register_backend, Backend
 import os
 from utils.correctness import execute_template
 from utils.performance import time_execution_event_template
+from config import arch_list
 
 @register_backend('cuda')
 class CudaBackend(Backend):
@@ -18,6 +19,7 @@ class CudaBackend(Backend):
 
     def compile(self, generated_code, op):
         os.environ["TORCH_USE_CUDA_DSA"] = "1"
+        os.environ["TORCH_CUDA_ARCH_LIST"] = ";".join(arch_list)
         try:
             compile(generated_code, "<string>", "exec")
             exec(generated_code, self.context)

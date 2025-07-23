@@ -18,6 +18,8 @@ num_completions=1
 
 seed_num=1024
 
+# cuda device
+arch_list = ['Ada']
 
 # Ascend compile related
 op_engineer_dir = f'{project_root_path}/ascend_op_projects'
