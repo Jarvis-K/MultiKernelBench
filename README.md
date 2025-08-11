@@ -12,6 +12,9 @@ pip install -r requirements.txt
 
 # For NPU users:
 pip install torch-npu==2.1.0.post12
+
+# For Intel GPU (torch xpu) users:
+pip install torch==2.7.0 --index-url https://download.pytorch.org/whl/xpu
 ```
 You can rent GPU or NPU resources from online platforms such as [autodl](https://www.autodl.com/home). For TPU resources, you can use services like [Google Colab](https://colab.research.google.com/)
 
