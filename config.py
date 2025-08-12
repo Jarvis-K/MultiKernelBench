@@ -20,6 +20,7 @@ seed_num=1024
 
 # cuda device
 arch_list = ['Ada']
+arch_list_xpu = ['dg2']
 
 # Ascend compile related
 op_engineer_dir = f'{project_root_path}/ascend_op_projects'
