@@ -14,7 +14,10 @@
 BASE_DIR=$(pwd)
 
 # 编译wheel包
-python3 setup.py build bdist_wheel
+if ! python3 setup.py build bdist_wheel; then
+    echo "Error: Failed to build wheel package"
+    exit 1
+fi
 
 # 安装wheel包
 cd ${BASE_DIR}/dist
