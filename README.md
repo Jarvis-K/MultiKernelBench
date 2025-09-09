@@ -1,6 +1,6 @@
 # MultiArchKernelBench
 
-A benchmark for evaluating LLMs' ability to generate kernels for various platform. Now supporting CUDA and triton kernels for GPUs, Ascendc kernels for NPUs and pallas kernels for TPUs.
+A benchmark for evaluating LLMs' ability to generate kernels for various platform. Now supporting CUDA and triton kernels for GPUs, Ascendc kernels for NPUs, pallas kernels for TPUs and SYCL kernels for Intel GPUs.
 
 ## Quick start
 
