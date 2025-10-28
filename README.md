@@ -1,6 +1,13 @@
-# MultiArchKernelBench
+# MultiKernelBench
 
-A benchmark for evaluating LLMs' ability to generate kernels for various platform. Now supporting CUDA and triton kernels for GPUs, Ascendc kernels for NPUs and pallas kernels for TPUs.
+A benchmark for evaluating LLMs' ability to generate kernels for various platform. Now supporting CUDA and triton kernels for GPUs, Ascendc and TileLang kernels for NPUs, pallas kernels for TPUs and SYCL kernels for Intel GPUs.
+
+## Latest News
+- **27/10/2025** – Introduced a new task category featuring 15 attention tasks, including MQA and GQA. 
+- **08/10/2025** – Added **TileLang-Ascend backend** support for **Ascend NPUs**.  
+- **12/08/2025** – Added **SYCL backend** support for **Intel GPUs** – thanks to **NinaWie** for the contribution!  
+- **18/07/2025** – 🎉 Announced the open-source release of **MultiKernelBench**, a **multi-platform benchmark for kernel generation**, now publicly available!
+
 
 ## Quick start
 
@@ -12,6 +19,9 @@ pip install -r requirements.txt
 
 # For NPU users:
 pip install torch-npu==2.1.0.post12
+
+# For Intel GPU (torch xpu) users:
+pip install torch==2.7.0 --index-url https://download.pytorch.org/whl/xpu
 ```
 You can rent GPU or NPU resources from online platforms such as [autodl](https://www.autodl.com/home). For TPU resources, you can use services like [Google Colab](https://colab.research.google.com/)
 
